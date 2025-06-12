@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HEX - Multiplayer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="menu">
+    <h1>HEX - Jogo de Tabuleiro</h1>
+
+    <h3>Seu nome (apelido):</h3>
+    <input type="text" id="nicknameInput" placeholder="Ex: Ana, Lucas..." maxlength="12" />
+
+    <h3>Jogador:</h3>
+    <select id="playerIndexSelect">
+      <option value="0">Jogador 0</option>
+      <option value="1">Jogador 1</option>
+      <option value="2">Jogador 2</option>
+      <option value="3">Jogador 3</option>
+      <option value="4">Jogador 4</option>
+      <option value="5">Jogador 5</option>
+    </select>
+
+    <h3>Número de jogadores:</h3>
+    <select id="playerCount">
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+    </select>
+
+    <button onclick="createMatch()">Criar nova partida</button>
+
+    <h2>Ou entre com um código</h2>
+    <input type="text" id="joinCode" placeholder="Código da partida" maxlength="6" />
+    <button onclick="joinMatch()">Entrar</button>
+
+    <p id="feedback"></p>
+  </div>
+  <script src="menu.js"></script>
+</body>
+</html>

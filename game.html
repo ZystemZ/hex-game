@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>HEX - Partida</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>HEX - Em Jogo</h1>
+  <h2 id="turnInfo">Aguardando jogadores...</h2>
+
+  <div id="lobbyUI">
+    <h2>Lobby</h2>
+    <div id="playerList"></div>
+  </div>
+
+  <div id="scoreBoard"></div>
+  <div id="gameStatus">...</div>
+  <div id="board"></div>
+
+  <div id="controls">
+    <button id="readyBtn">Estou pronto!</button>
+    <button id="newPawnBtn" disabled>Novo Peão</button>
+    <button id="rollBtn" disabled>Rolar Dado</button>
+    <p id="resultText"></p>
+  </div>
+
+  <div id="chatBox">
+    <div id="chatLog"></div>
+    <input type="text" id="chatInput" placeholder="Digite uma mensagem..." />
+    <button id="sendChat">Enviar</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>

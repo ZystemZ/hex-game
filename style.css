@@ -1,0 +1,89 @@
+body {
+  background: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#board {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 800px;
+  margin: 20px auto;
+}
+
+.hex {
+  width: 60px;
+  height: 68px;
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+  background-color: #444;
+  margin: -17px 4px;
+  position: relative;
+}
+
+.pawn {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 30px;
+  border-radius: 50%;
+  color: white;
+}
+
+.highlight {
+  outline: 3px solid yellow;
+  cursor: pointer;
+}
+
+/* Lobby */
+#lobbyUI {
+  max-width: 400px;
+  margin: 20px auto;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#playerList div {
+  margin: 5px 0;
+  padding: 5px;
+  background: #222;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.player-status-ready {
+  color: limegreen;
+}
+.player-status-waiting {
+  color: orange;
+}
+
+/* Chat */
+#chatBox {
+  max-width: 600px;
+  margin: 20px auto;
+  background: #1a1a1a;
+  padding: 10px;
+  border-radius: 8px;
+}
+#chatLog {
+  height: 150px;
+  overflow-y: auto;
+  background: #111;
+  padding: 10px;
+}
+#chatInput {
+  width: 75%;
+  padding: 10px;
+}
+#sendChat {
+  padding: 10px;
+}

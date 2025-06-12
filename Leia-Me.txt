@@ -1,0 +1,51 @@
+/hex-game
+│
+├── index.html               ← Tela inicial (criar / entrar em partida)
+├── menu.js                  ← Lógica da criação e entrada de partidas
+├── style.css                ← CSS global (menu, jogo, lobby, chat)
+│
+├── game.html                ← Tela principal da partida
+├── game.js                  ← Lógica do jogo e comunicação com WebSocket
+│
+├── server.js                ← Servidor WebSocket com lobby, chat, jogo, pronto
+│
+├── /backend                 ← PHP + MySQL
+│   ├── create_match.php    ← Cria partida (define maxPlayers e estado inicial)
+│   ├── join_match.php      ← Retorna estado da partida
+│   ├── db.php              ← (opcional) conexão ao banco
+│   └── (opcionais futuros)
+│       └── save_result.php ← salvar pontuação/ranking (futuro)
+│
+├── /assets                  ← (opcional) imagens, ícones, logo
+│   └── logo.png
+│
+└── README.md                ← Instruções de uso e publicação (a gerar)
+
+Fluxo de execução principal
+index.html + menu.js
+→ Criação/entrada na partida via PHP + MySQL
+
+game.html + game.js
+→ Conecta no server.js via WebSocket
+→ Sincroniza gameState (tiles, peões, turno, placar)
+
+server.js
+→ Mantém todas as partidas ativas
+→ Lida com mensagens: join, ready, chat, update, start
+→ Envia atualizações instantâneas aos jogadores
+
+/backend/ (PHP + MySQL)
+→ Usado para persistência de dados (criação de partidas, ranking, histórico)
+
+O que fazer depois de baixar
+Extraia o ZIP em uma pasta chamada hex-game
+
+[Instale dependências:]
+npm install
+
+[Inicie o WebSocket:][bash]
+
+node server.js
+
+[Execute o PHP em servidor local:][perl]
+http://localhost/hex-game/index.html
