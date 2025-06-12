@@ -1,0 +1,6 @@
+CREATE TABLE matches (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  code VARCHAR(10) UNIQUE,
+  state LONGTEXT,
+  turn INT DEFAULT 0
+);
